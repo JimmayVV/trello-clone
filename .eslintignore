@@ -1,0 +1,3 @@
+client/build/* 
+webpack*.*
+client/src/**/*.test.js

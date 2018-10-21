@@ -1,0 +1,28 @@
+{
+  "name": "full-stack-react-boilerplate",
+  "version": "1.0.0",
+  "description": "Full stack node, express, react, webpack 4, babel 7 boilerplate with other goodies",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon ./server/index.js",
+    "client": "cd client && npm run start",
+    "start": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "react",
+    "webpack4",
+    "babel7",
+    "node",
+    "express"
+  ],
+  "author": "Jimmy Van Veen <jimmy.van.veen@gmail.com> (https://www.jimmyvanveen.com)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "nodemon": "^1.18.4"
+  }
+}
