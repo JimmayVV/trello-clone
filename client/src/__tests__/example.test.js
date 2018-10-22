@@ -1,4 +1,7 @@
+import React from 'react'
 import App from '../app'
-// const App = require('../app.js')
+import {render} from 'react-testing-library'
 
-test('it works!', () => {})
+test('renders', () => {
+  render(<App />)
+})

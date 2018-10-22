@@ -12,17 +12,38 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.css$/,
+        test: /\.module.(css|scss)$/,
         use: [
+          MiniCssExtractPlugin.loader,
           {
-            loader: MiniCssExtractPlugin.loader,
+            loader: 'css-loader',
             options: {
               // you can specify a publicPath here
               // by default it use publicPath in webpackOptions.output
               publicPath: '../',
+              modules: true,
+              sourceMap: true,
             },
           },
-          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(css|scss)$/,
+        exclude: /\.module.(css|scss)$/, // We don't want to import those css modules as regular css
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              // you can specify a publicPath here
+              // by default it use publicPath in webpackOptions.output
+              publicPath: '../',
+              modules: false,
+              sourceMap: true,
+            },
+          },
+          'sass-loader',
         ],
       },
       {
