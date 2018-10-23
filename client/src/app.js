@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
-import styles from './app.module.scss'
+// import styles from './app.module.scss'
 import './app.css'
-
-console.log('styles:', styles)
 
 class App extends Component {
   state = {

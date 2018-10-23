@@ -2,6 +2,8 @@ const OFF = 0,
   WARN = 1,
   ERROR = 2
 
+const path = require('path')
+
 module.exports = {
   extends: ['airbnb', 'prettier/react', 'eslint-config-prettier'],
   // extends: ['airbnb', 'prettier', 'prettier/react', 'eslint-config-prettier'],
@@ -44,4 +46,11 @@ module.exports = {
       files: 'src/**/*.js',
     },
   ],
+  settings: {
+    'import/resolver': {
+      webpack: {
+        config: path.join(__dirname, 'webpack.config.js'),
+      },
+    },
+  },
 }

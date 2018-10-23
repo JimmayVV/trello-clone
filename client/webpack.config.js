@@ -53,6 +53,7 @@ module.exports = {
     ],
   },
   resolve: {
+    modules: ['node_modules', path.join(__dirname, 'src'), 'test'],
     extensions: ['*', '.js', '.jsx'],
   },
   output: {

@@ -8,10 +8,9 @@ module.exports = {
   ],
   plugins: [
     '@babel/plugin-transform-runtime',
-    'react-hot-loader/babel',
-
     '@babel/plugin-transform-async-to-generator',
-
     ['@babel/plugin-proposal-class-properties', {loose: true}],
+
+    isTest ? 'react-hot-loader/babel' : null,
   ],
 }
